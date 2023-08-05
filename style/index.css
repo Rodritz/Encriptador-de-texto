@@ -1,0 +1,609 @@
+*{
+    font-family: 'Roboto Serif', serif; 
+}
+
+body{
+    background-image: url("../imagenes/Encriptar-archivos-fonde.jpg");
+    background-size: cover;
+    scroll-behavior: smooth;
+}
+
+/*-----------Header----------*/
+
+.logo{ 
+    margin-left: 40px;
+    font-size: 180px;
+    text-decoration: none;
+    text-shadow: 0 0 5px black, 0 0 15px black, 0 0 30px black, 0 0 50px black;
+    animation: rainbow 10s infinite;
+}
+
+@keyframes rainbow {
+    0% {
+        color: red;
+    }
+    14% {
+        color: orange;
+    }
+    28% {
+        color: yellow;
+    }
+    42% {
+        color: green;
+    }
+    57% {
+        color: blue;
+    }
+    71% {
+        color: indigo;
+    }
+    85% {
+        color: violet;
+    }
+    100% {
+        color: red;
+    }
+}
+
+/*----main----*/
+.main{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*-----aca comienza el css del primer contenedor-----*/
+.contenedor1{
+    width:936px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.contenedor-textarea{
+    display: flex;
+    justify-content: center;
+}
+.textarea{
+    display: flex;
+    align-items: center;
+    resize: none;
+    font-size: 20px;
+    color: #E5E5E5;
+    border: none;
+    padding: 15px;
+    text-transform: lowercase;
+    background-color:transparent;
+}
+
+::placeholder{
+    text-align: center;
+    color: #E5E5E5;
+    font-size: 20px;
+    text-shadow: 0 0 10px black, 0 0 15px black, 0 0 20px black,0 0 25px black;
+}
+
+.textarea:focus{
+    outline: none; 
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px; 
+    backdrop-filter: blur(3px);           
+}
+
+.h6{
+    margin: 5px 124.9px;
+    font-size: 0.8em;
+    color: #E5E5E5;
+}
+.exclamation{
+    padding-right: 5px;
+    height: 15px;
+}
+
+.btn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 12px 0 24px 0;
+    height: 67px;
+} 
+
+.btn-encriptar{
+    width: 332.50px;
+    height: 67px;
+    margin: 12px;
+    padding: 15px 0;
+    font-size: 18px;
+    color:#D8DFE8;
+    background:#0A3871;
+    border:none;
+    border-radius: 20px;
+    transition: 1s all;
+    cursor:pointer;
+}
+
+.btn-encriptar:hover{
+    background: rgb(9, 243, 114); 
+    color: black;   
+    transform: scale(1.2);
+    font-weight: bold;
+}
+
+.btn-desencriptar{
+    width: 332.50px;
+    height: 67px;
+    margin: 12px;
+    padding: 14px 0;
+    font-size: 18px;
+    color: #0A3871;
+    background: #E5E5E5;
+    border:solid 1px;
+    border-radius: 20px;
+    transition: 1s all;
+    cursor:pointer;
+}
+
+.btn-desencriptar:hover{
+    background: rgb(9, 243, 114); 
+    color: black;  
+    transform: scale(1.2);
+    font-weight: bold;
+}
+
+.btn-eliminar{
+    width: 332.50px;
+    height: 67px;
+    margin: 12px;
+    padding: 14px 0;
+    font-size: 18px;
+    color:#D8DFE8;
+    background:rgb(180,45,45);
+    border:none;
+    border-radius: 20px;
+    transition: 1s all;
+    cursor:pointer;
+}
+
+.btn-eliminar:hover{
+    transform: scale(1.2);
+    background-color: red;
+    font-weight: bold;
+    
+}
+/*-----aca comienza el css del segundo contenedor-----*/
+.contenedor2{
+    position: relative;
+    width: 624px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+.glass{
+    position: absolute;
+    border: none; 
+    resize: none;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(3px);
+}
+
+.mensaje-codificado{
+    border: none;     
+    text-transform: lowercase;
+    padding: 20px;
+    color: #E5E5E5;
+    font-size: 20px;
+    resize: none;
+    background: rgba(255,255,255,0);
+    border-radius: 20px;
+    backdrop-filter: blur(3px);    
+}
+
+.imagen-hacker {
+    position: absolute;
+    top: 15%;
+    height: 45%;
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+}
+
+.mensaje-codificado:focus{
+    outline: none;
+}
+
+.btn3{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.btn-copiar{
+    width: 250px;
+    height: 67px;
+    margin: 12px 50px;
+    padding: 14px 0;
+    font-size: 18px;
+    color: #0A3871;
+    background: #E5E5E5;
+    border:solid 1px;
+    border-radius: 20px;
+    transition: 1s all;
+    cursor:pointer;
+    z-index: 1;
+}
+
+.btn-copiar:hover{
+    transform: scale(1.2);
+}
+
+.btn-pegar{
+    width: 250px;
+    height: 67px;
+    margin: 12px 50px;
+    padding: 14px 0;
+    font-size: 18px;
+    color: #0A3871;
+    background: #E5E5E5;
+    border:solid 1px;
+    border-radius: 20px;
+    transition: 1s all;
+    cursor:pointer;
+    z-index: 1;
+}
+
+.btn-pegar:hover{
+    transform: scale(1.2);
+}
+
+/*Aca comienza el footer*/
+
+.footer{
+    margin: 40px 0 20px 0;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(7px);
+    
+}
+
+.footer-logo{
+    height: 50px;
+}
+
+/*responsive*/
+/*ok funcionando*/
+/*@media screen and (min-width: 1150px) and (max-width: 1559px){
+    .main{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .textarea{
+        width: 600px;
+    }
+    .h6{
+        display: flex;
+        justify-content: center;
+    } 
+}*/
+
+/*revisar*/
+/*@media screen and (min-width: 993) and (max-width: 1149px){
+    .main{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .conteneder2{
+        width: 100%;
+    }
+    
+}*/
+
+
+@media screen and (max-width:992px){
+    .logo{
+        font-size: 160px;
+    }
+    .conteneder2{
+        width: 100%;
+    }    
+    .h6{
+        display: flex;
+        justify-content: center;
+    } 
+    .glass{
+        width: 500px;
+        height: 615px;
+    }    
+}
+
+@media screen and (max-width:912px){
+    .logo{
+        font-size: 160px;
+    }    
+    .conteneder2{
+        width: 912px;
+    }    
+    .h6{
+        display: flex;
+        justify-content: center;
+    }  
+    .btn-encriptar, .btn-desencriptar, .btn-eliminar, .btn-copiar, .btn-pegar{
+        width: 300px;
+        height: 67px;
+        margin: 8px;
+        font-size: 18;
+    }
+    .glass{
+        width: 500px;
+        height: 600px;
+    } 
+}
+
+@media screen and (max-width:820px){
+    .logo{
+        font-size: 180px;
+    }
+
+    .conteneder2{
+        width: 820px;
+    }
+    .mensaje-codificado{
+        width: 350px;
+    }
+}
+
+@media screen and (max-width:768px){
+    
+    .textarea{
+        width: 730px;
+        font-size: 18px;
+    }
+    .conteneder2{
+        width: 768px;
+    }
+    ::placeholder{
+        font-size: 20px;
+    }
+    
+    .footer{
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width:600px){
+    .logo{
+        font-size: 140px;
+    }
+    .textarea{
+        font-size: 19px;
+        width:500px;
+    }
+    ::placeholder{
+        font-size: 18px;
+    }
+    .mensaje-codificado{
+        width: 350px;
+    }
+    .footer{
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width:576px){
+    .logo{
+        font-size: 140px;
+    }
+    .textarea{
+        width:500px;
+    }
+    ::placeholder{
+        font-size: 17px;
+    }
+    .mensaje-codificado{
+        width: 350px;
+    }
+    .footer{
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width:540px){
+    .contenedor1{
+        width: 540px;
+    }
+    .h6{
+        margin: 0;
+    }
+    .conteneder2{
+        width: 540px;
+    }
+    .btn-encriptar, .btn-desencriptar, .btn-eliminar, .btn-copiar, .btn-pegar{
+        width: 200px;
+        height: 50px;
+        margin: 8px;
+    }
+    .glass{
+        width: 350px;
+        height: 490px;
+    }
+    .mensaje-codificado{
+        width: 300px;
+        height: 300px;
+    }
+    .imagen-hacker{
+        height: 40%;
+    }
+    .footer{
+        gap: 15px;
+        margin: 60px 0 20px 0;
+    }
+    .footer-logo{
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 440px){
+    
+    .textarea{
+        width:400px;
+    }
+    ::placeholder{
+        font-size: 15px;
+    }
+    .glass{
+        width: 350px;
+    }
+    .mensaje-codificado{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 414px){
+    
+    .textarea{
+        width:300px;
+        height: 250px;
+        margin-bottom: 10px
+    }
+    .h6{
+        margin: 0;
+    }
+
+    .btn-encriptar, .btn-desencriptar, .btn-eliminar, .btn-copiar, .btn-pegar{
+        width: 200px;
+        height: 50px;
+        margin: 8px;
+    }
+    .glass{
+        width: 300px;
+        height: 490px;
+    }
+    .mensaje-codificado{
+        width: 250px;
+        height: 300px;
+    }
+
+    .imagen-hacker{
+        height: 40%;
+    }
+    .footer{
+        gap: 15px;
+        margin: 60px 0 20px 0;
+    }
+    .footer-logo{
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    
+    .textarea{
+        width:300px;
+        height: 250px;
+        margin-bottom: 10px
+    }
+    .h6{
+        margin: 0;
+    }
+
+    .btn-encriptar, .btn-desencriptar, .btn-eliminar, .btn-copiar, .btn-pegar{
+        width: 160px;
+        height: 45px;
+        margin: 4px;
+        font-size: 14px;
+    }
+    .glass{
+        width: 300px;
+        height: 490px;
+    }
+    .mensaje-codificado{
+        width: 250px;
+        height: 300px;
+    }
+
+    .imagen-hacker{
+        height: 40%;
+    }
+    .footer{
+        gap: 15px;
+        margin: 60px 0 20px 0;
+    }
+    .footer-logo{
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 360px){
+    
+    .textarea{
+        width:300px;
+        height: 250px;
+        margin-bottom: 10px
+    }
+    .h6{
+        margin: 0;
+    }
+
+    .btn-encriptar, .btn-desencriptar, .btn-eliminar, .btn-copiar, .btn-pegar{
+        width: 200px;
+        height: 50px;
+        margin: 8px;
+    }
+    .glass{
+        width: 300px;
+        height: 490px;
+    }
+    .mensaje-codificado{
+        width: 250px;
+        height: 300px;
+    }
+
+    .imagen-hacker{
+        height: 40%;
+    }
+    .footer{
+        gap: 15px;
+        margin: 60px 0 20px 0;
+    }
+    .footer-logo{
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 280px){
+
+    .logo{
+        margin-left: 20px;
+    }
+    .textarea{
+        width: 200px;
+    }
+    .btn-encriptar, .btn-desencriptar, .btn-eliminar, .btn-copiar, .btn-pegar{
+        width: 160px;
+        height: 45px;
+        margin: 4px;
+        font-size: 14px;
+    }
+    .glass{
+        width: 250px;
+        height: 470px;
+    }
+    .mensaje-codificado{
+        width: 200px;
+    }
+    .footer{
+        font-size: 13px;
+    }
+}
